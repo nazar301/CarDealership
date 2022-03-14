@@ -10,7 +10,7 @@
   -User with account gets access to custom orders
   -User able to look through inventory
   -User bieng able to contact the dealership
-  -
+  -User able to look through past cars sold 
 
   
   # Front end 
