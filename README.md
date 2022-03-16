@@ -17,7 +17,7 @@
   
   # Front end 
   -React
-  -Bookstrap
+  -Bootstrap
   -css
   -html
   # Back end 
