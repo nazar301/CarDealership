@@ -34,7 +34,7 @@ function CustomOrder () {
         };
         
 
-        fetch('http://localhost:4000/cars', requestData)
+        fetch('https://dealershipbackend.herokuapp.com/cars', requestData)
           
           .then((data) => data.json())
           .then((parsedData) => {

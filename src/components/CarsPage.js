@@ -5,7 +5,7 @@ const CarsPage = () => {
   const [images, setImages] = useState([])
  
   let getCars = async () => {
-    let data = await fetch('http://localhost:4000/cars');
+    let data = await fetch('https://dealershipbackend.herokuapp.com/cars');
     let json = await data.json();
     setCars(json);
    
@@ -22,7 +22,7 @@ const CarsPage = () => {
 
 
   let deletecar = async (car) => {
-    let data = await fetch('http://localhost:4000/cars/' + car._id, {
+    let data = await fetch('https://dealershipbackend.herokuapp.com/cars' + car._id, {
       method: 'DELETE',
       body: null,
       headers: {

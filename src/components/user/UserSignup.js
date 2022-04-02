@@ -30,7 +30,7 @@ function UserSignup() {
         };
         
 
-        fetch('http://localhost:4000/session/register', requestData)
+        fetch('https://dealershipbackend.herokuapp.com/register', requestData)
         
           .then((data) => data.json())
           .then((parsedData) => {
