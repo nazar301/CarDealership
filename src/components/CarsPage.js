@@ -22,7 +22,7 @@ const CarsPage = () => {
 
 
   let deletecar = async (car) => {
-    let data = await fetch('https://dealershipbackend.herokuapp.com/cars' + car._id, {
+    let data = await fetch('https://dealershipbackend.herokuapp.com/cars/' + car._id, {
       method: 'DELETE',
       body: null,
       headers: {
