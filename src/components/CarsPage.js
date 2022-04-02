@@ -74,6 +74,12 @@ const CarsPage = () => {
             <div className='col-sm'>Description</div>
             <div className='col-sm'>{car.description}</div>
           </div>
+          <button 
+                      className='button' 
+                      id='button' 
+                      type ='button' 
+                      onClick={deletecar}
+                      >remove</button>
         </>
       ))}
     </div>
