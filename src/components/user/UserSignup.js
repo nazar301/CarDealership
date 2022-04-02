@@ -18,7 +18,7 @@ function UserSignup() {
         
     const requestData = {
           method: 'POST',
-          credentials: 'include',
+          // credentials: 'include',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
             email: formState.email,
@@ -31,7 +31,8 @@ function UserSignup() {
         };
         
 
-        fetch('https://dealershipbackend.herokuapp.com/session/register', requestData)
+        fetch( 'https://dealershipbackend.herokuapp.com/session/register', requestData)
+        // fetch('http://localhost:4000/session/register', requestData)
         
           .then((data) => data.json())
           .then((parsedData) => {
@@ -116,7 +117,7 @@ function UserSignup() {
                       <h2 color='red'>Passwords must match</h2>
                   </div>    
               )}
-
+              <div>{message}</div>
 
           </form>
           {/* <Form onSubmit={handleSubmit}>

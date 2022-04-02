@@ -1,0 +1,9 @@
+div {
+    
+    content: center;
+    align-items: center;
+    size: 500px;
+    color: rgb(0, 0, 0);
+    border-color: bisque;
+    border-bottom-left-radius: 10px;
+}

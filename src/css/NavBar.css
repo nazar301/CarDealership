@@ -1,11 +1,31 @@
 .NavBar {
-    font-style: italic;
+    font-style: Bold;
     background-color: black;
     margin-top: 0px;
     border: 0px;
     padding: 1px;
+    display: block;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
 }
 ul {
     list-style: none;
     display: inline-flex;
+}
+.home {
+    text-align: left;
+    /* list-style-image: url('../images/LogoGold.jpg'); */
+   
+}
+.cars {
+    text-align: right;
+}
+ul {
+    word-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.5rem;
+    
 }

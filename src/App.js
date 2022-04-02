@@ -6,8 +6,12 @@ import CustomOrder from './components/CustomOrder';
 import Profile from './components/user/Profile';
 import UserSignup from './components/user/UserSignup';
 import CarsPage from './components/CarsPage'
-import Footer from './components/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import EditCar from './components/EditCar';
+import RemoveCar from './components/RemoveCar';
+import { Fragment } from 'react';
+
+// import Footer from './components/Footer';
+
 
 
 function App() {
@@ -21,10 +25,20 @@ function App() {
           <Route path='/Cars' element={<CarsPage/>}>Cars</Route>
           <Route path='/Profile' element={<Profile/>}>Profile</Route>
           <Route path='/Signup' element={<UserSignup/>}>Signup</Route>
+          <Route path={`/cars/:id`}
+              element={
+                <Fragment>
+                    <EditCar/>
+                    <RemoveCar/>
+                </Fragment>          
+              }></Route>
       </Routes>
       <div>
 
-        <Footer/>
+        {/* <LandingPage/> */}
+        {/* <CarsPage/> */}
+        {/* <EditCar/> */}
+        {/* <Footer/> */}
       </div>
     </div>
   );

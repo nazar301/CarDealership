@@ -1,55 +1,40 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import EditCar from './EditCar';
+import RemoveCar from './RemoveCar';
 
 const CarsPage = () => {
   const [cars, setCars] = useState([]);
   const [images, setImages] = useState([])
- 
+  // const carList = cars.map((cars, index) => key={index} {make})
+  // const identifier = cars.map(((car)=> car._id)
+
+  // )
+  
   let getCars = async () => {
-    let data = await fetch('https://dealershipbackend.herokuapp.com/cars');
+    let data = await fetch(
+      'https://dealershipbackend.herokuapp.com/cars'
+      // 'http://localhost:4000/cars'
+      );
     let json = await data.json();
     setCars(json);
-   
   };
 
-  
+
   useEffect(() => {
     getCars();
   }, []);
 
-  let addCar = (car) => {
-    setCars([...cars, car]);
-  };
-
-
-  let deletecar = async (car) => {
-    let data = await fetch('https://dealershipbackend.herokuapp.com/cars/' + car._id, {
-      method: 'DELETE',
-      body: null,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    let json = await data.json();
-    if (json) {
-      let data = cars.map((datum) => {
-        if (datum._id === car._id) {
-          return json;
-        }
-        return datum;
-      });
-      setCars(data);
-    }
-  }
-  console.log(cars)
-
 
   return (
     
-      
-             
+    <div>
+        
     <div className='container'>
       {cars.map((car) => (
+             
         <>
+          
           <div className='row' key={car._id}>
             <div className='col-sm'>Make</div>
             <div className='col-sm'>{car.make}</div>
@@ -74,14 +59,17 @@ const CarsPage = () => {
             <div className='col-sm'>Description</div>
             <div className='col-sm'>{car.description}</div>
           </div>
-          <button 
-                      className='button' 
-                      id='button' 
-                      type ='button' 
-                      onClick={deletecar}
-                      >remove</button>
+          <Link to={`/cars/${car._id}`} > {car.make} </Link> 
+                
+          {/* <EditCar/>  */}
+          {/* <RemoveCar/> */}
         </>
+        
       ))}
+    </div>
+        <div className='background'>
+        {/* <img src={require('../images/Lot.jpg')} alt='lot'/> */}
+        </div>
     </div>
   );
          

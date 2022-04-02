@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 
-function CustomOrder () {
+const CustomOrder = () => {
 
+  
   const initialState = { 
     make: '', 
     model: '', 
@@ -13,8 +14,11 @@ function CustomOrder () {
     milage: '', 
     description: ''
   };
+  
+
   const [formState, setFormState] = useState(initialState);
   const [message, setMessage] = useState();
+  
 
   let addCar = () => {
    
@@ -34,7 +38,10 @@ function CustomOrder () {
         };
         
 
-        fetch('https://dealershipbackend.herokuapp.com/cars', requestData)
+        fetch(
+          'https://dealershipbackend.herokuapp.com/cars', 
+          // 'http://localhost:4000/cars',
+          requestData)
           
           .then((data) => data.json())
           .then((parsedData) => {
@@ -75,82 +82,6 @@ function CustomOrder () {
         <p>4. The vehicle will receive a post-sale inspection to verify its physical and mechanical condition after the purchase along with a warranty that extends to 21 days and 250 miles. We purchase vehicles all over the United States and can even arrange for the vehicle to be transported directly to your home or business.</p>
       </div>
     
-      {/* <Form onSubmit={handleSubmit} id='CreateOrder'> 
-        <Form.Group className="SpecialOrder" id="Make">
-          <Form.Label>Make</Form.Label>
-          <Form.Control 
-          type="text" 
-          placeholder="Enter desired manufacturer" 
-          value={formState.make}
-          onChange={handleChange}
-          />
-        </Form.Group>
-        
-        <Form.Group className="SpecialOrder" id="Model">
-          <Form.Label>Model</Form.Label>
-          <Form.Control 
-          type="text" 
-          placeholder="Enter desired model" 
-          value={formState.model}
-          onChange={handleChange}
-          />
-        </Form.Group>
-        
-        <Form.Group className="SpecialOrder" id="Color">
-          <Form.Label>Color</Form.Label>
-          <Form.Control 
-          type="text" 
-          placeholder="Enter desired color/'s" 
-          value={formState.color}
-          onChange={handleChange}
-          />
-        </Form.Group>
-        
-        <Form.Group className="SpecialOrder" id="Bodystyle">
-          <Form.Label>Bodystyle</Form.Label>
-          <Form.Control 
-          type="text" 
-          placeholder="Enter bodystyle" 
-          value={formState.bodyStyle}
-          onChange={handleChange}
-          />
-        </Form.Group>
-        
-        <Form.Group className="SpecialOrder" id="Year">
-          <Form.Label>Year</Form.Label>
-          <Form.Control 
-          type="text" 
-          placeholder="Enter desired year/'s" 
-          value={formState.year}
-          onChange={handleChange} 
-          />         
-        </Form.Group>
-        
-        <Form.Group className="SpecialOrder" id="Milage">
-          <Form.Label>Milage</Form.Label>
-          <Form.Control 
-          type="text" 
-          placeholder="Enter desired milage" 
-          value={formState.milage}
-          onChange={handleChange}  
-          />    
-        </Form.Group>
-        
-        <Form.Group className="SpecialOrder" id="Description">
-          <Form.Label>Description</Form.Label>
-          <Form.Control 
-          type="text" 
-          placeholder="Enter any other details or specifications" 
-          value={formState.make}
-          onChange={handleChange}
-          />
-        </Form.Group>
-
-        <Button variant="primary" type="submit" onClick={handleSubmit}>
-          Submit
-        </Button>
-      </Form> */}
-
       <form onSubmit={handleSubmit}>
               <input type='text' 
               placeholder='make' 
@@ -216,7 +147,9 @@ function CustomOrder () {
             </div>
               
       </form>
-
+      <div>
+        {message}
+      </div>
 
     </div>
 

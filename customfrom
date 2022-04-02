@@ -1,0 +1,75 @@
+      {/* <Form onSubmit={handleSubmit} id='CreateOrder'> 
+        <Form.Group className="SpecialOrder" id="Make">
+          <Form.Label>Make</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter desired manufacturer" 
+          value={formState.make}
+          onChange={handleChange}
+          />
+        </Form.Group>
+        
+        <Form.Group className="SpecialOrder" id="Model">
+          <Form.Label>Model</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter desired model" 
+          value={formState.model}
+          onChange={handleChange}
+          />
+        </Form.Group>
+        
+        <Form.Group className="SpecialOrder" id="Color">
+          <Form.Label>Color</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter desired color/'s" 
+          value={formState.color}
+          onChange={handleChange}
+          />
+        </Form.Group>
+        
+        <Form.Group className="SpecialOrder" id="Bodystyle">
+          <Form.Label>Bodystyle</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter bodystyle" 
+          value={formState.bodyStyle}
+          onChange={handleChange}
+          />
+        </Form.Group>
+        
+        <Form.Group className="SpecialOrder" id="Year">
+          <Form.Label>Year</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter desired year/'s" 
+          value={formState.year}
+          onChange={handleChange} 
+          />         
+        </Form.Group>
+        
+        <Form.Group className="SpecialOrder" id="Milage">
+          <Form.Label>Milage</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter desired milage" 
+          value={formState.milage}
+          onChange={handleChange}  
+          />    
+        </Form.Group>
+        
+        <Form.Group className="SpecialOrder" id="Description">
+          <Form.Label>Description</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter any other details or specifications" 
+          value={formState.make}
+          onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Button variant="primary" type="submit" onClick={handleSubmit}>
+          Submit
+        </Button>
+      </Form> */}
