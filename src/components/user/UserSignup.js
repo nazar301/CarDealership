@@ -18,6 +18,7 @@ function UserSignup() {
         
     const requestData = {
           method: 'POST',
+          credentials: 'include',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
             email: formState.email,

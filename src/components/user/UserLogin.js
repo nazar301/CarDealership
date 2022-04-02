@@ -34,7 +34,7 @@ const login = async () => {
     try {
       const requestData = {
         method: 'POST',
-        // credentials: 'include',
+        credentials: 'include',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           username: formState.username,
