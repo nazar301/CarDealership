@@ -75,7 +75,7 @@ function CustomOrder () {
         <p>4. The vehicle will receive a post-sale inspection to verify its physical and mechanical condition after the purchase along with a warranty that extends to 21 days and 250 miles. We purchase vehicles all over the United States and can even arrange for the vehicle to be transported directly to your home or business.</p>
       </div>
     
-      <Form onSubmit={handleSubmit} id='CreateOrder'> 
+      {/* <Form onSubmit={handleSubmit} id='CreateOrder'> 
         <Form.Group className="SpecialOrder" id="Make">
           <Form.Label>Make</Form.Label>
           <Form.Control 
@@ -149,9 +149,9 @@ function CustomOrder () {
         <Button variant="primary" type="submit" onClick={handleSubmit}>
           Submit
         </Button>
-      </Form>
+      </Form> */}
 
-      {/* <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
               <input type='text' 
               placeholder='make' 
               id='make' 
@@ -215,7 +215,7 @@ function CustomOrder () {
                 >Add Car</button>
             </div>
               
-      </form> */}
+      </form>
 
 
     </div>
