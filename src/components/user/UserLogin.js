@@ -42,7 +42,7 @@ const login = async () => {
         }),
         
       };
-      const loginResponse = await fetch('https://dealershipbackend.herokuapp.com/login', requestData);
+      const loginResponse = await fetch('https://dealershipbackend.herokuapp.com/session/login', requestData);
       const loginJson = await loginResponse.json();
       // console.log(loginJson);
       // console.log(loginResponse)
