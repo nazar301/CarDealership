@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const EditCar = (cars) => {
   // const url = `http://localhost:4000/cars/`
-  const url ='https://dealershipbackend.herokuapp.com/cars'
+  const url ='https://dealershipbackend.herokuapp.com/cars/'
 
   const initialState = { 
     make: '', 
